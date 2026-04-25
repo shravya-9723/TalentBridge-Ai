@@ -21,6 +21,26 @@ TalentBridge AI is a full-stack Next.js application that evaluates **real skill 
   * Curated learning resources
 
 ---
+## 🧠 How It Works
+1. Extract skills from resume & job description
+2. Match required vs existing skills
+3. Assess skills via AI-generated questions
+4. Score answers (knowledge, clarity, confidence)
+5. Identify weak/missing skills
+6. Generate personalized learning plan
+
+## 📌 Sample Input
+Resume: React Developer with basic Node.js  
+JD: Full Stack Developer (React, Node, Docker)
+
+## 📌 Output
+- Matched: React
+- Missing: Docker
+- Weak: Node.js
+
+Learning Plan:
+- Learn Docker basics (3 days)
+- Improve Node.js APIs (4 days)
 
 ## 🔄 Navigation Flow
 
