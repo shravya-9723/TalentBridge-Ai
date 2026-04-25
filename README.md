@@ -59,6 +59,73 @@ Learning Plan:
 * mammoth (DOCX parsing)
 
 ---
+## 🧩 Architecture Overview
+
+```
+User Input (Resume + JD)
+        ↓
+File Parsing API (/api/parse)
+        ↓
+Skill Extraction (AI)
+        ↓
+Skill Matching Engine
+        ↓
+Question Generator (AI)
+        ↓
+Assessment Chat (User Interaction)
+        ↓
+Answer Evaluation API
+        ↓
+Scoring Logic Engine
+        ↓
+Gap Analysis
+        ↓
+Learning Plan Generator (AI)
+        ↓
+Results Dashboard
+```
+
+---
+
+## 🧠 Scoring Logic
+
+Each answer is evaluated on:
+
+* **Knowledge (0–10)** → correctness & depth
+* **Clarity (0–10)** → explanation quality
+* **Confidence (0–10)** → completeness & structure
+
+### Final Score Calculation:
+
+```
+finalScore = (knowledge × 0.5) + (clarity × 0.3) + (confidence × 0.2)
+```
+
+### Skill Level Classification:
+
+* **Strong** → 7–10
+* **Moderate** → 4–6
+* **Weak** → <4
+
+---
+
+## 📊 Gap Analysis
+
+* **Missing Skills** → not present in resume
+* **Weak Skills** → low evaluation score
+
+---
+
+## 📈 Learning Plan Logic
+
+* Focuses on **adjacent skills** (related to existing knowledge)
+* Ensures skills are **realistically learnable in 7–14 days**
+* Provides:
+
+  * daily breakdown
+  * time estimates
+  * curated resources
+
 
 ## 🔌 API Endpoints
 
