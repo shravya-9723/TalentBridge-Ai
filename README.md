@@ -1,45 +1,54 @@
-# TalentBridge AI
+# 🚀 TalentBridge AI
 
-TalentBridge AI is a full-stack Next.js application for resume vs job-description skill-gap analysis, adaptive assessment, and guided upskilling plans.
+TalentBridge AI is a full-stack Next.js application that evaluates **real skill proficiency** (not just resume claims), conducts adaptive assessments, and generates **personalized learning plans**.
 
-## Features
+---
 
-- Light glassmorphism UI with soft gradient background
-- Upload support for `PDF`, `DOCX`, `TXT`, `JPG`, `PNG`, `JPEG`
-- Textarea fallback for resume and job description
-- Automatic file parsing via `/api/parse`
-- Skill extraction and matching (`matched`, `missing`, `weak`)
-- Assessment chat with per-question progress and saved answers
-- Evaluation API with weighted final scoring
-- Results dashboard with:
-  - skill score progress bars
-  - missing and weak skill gap lists
-  - 7-14 day learning plan
-  - curated resources
+## ✨ Features
 
-## Navigation Flow
+* 🎨 Light glassmorphism UI with soft gradient background
+* 📄 Upload support for `PDF`, `DOCX`, `TXT`, `JPG`, `PNG`, `JPEG`
+* 📝 Textarea fallback for resume and job description
+* ⚡ Automatic file parsing via `/api/parse`
+* 🧠 Skill extraction and matching (`matched`, `missing`, `weak`)
+* 💬 Conversational assessment with progress tracking
+* 📊 AI-based evaluation with weighted scoring
+* 📈 Results dashboard including:
 
-`Input Page -> Skill Match -> Assessment Chat -> Results Dashboard`
+  * Skill score progress bars
+  * Missing & weak skill gap analysis
+  * 7–14 day personalized learning plan
+  * Curated learning resources
 
-## Tech Stack
+---
 
-- Next.js (App Router, TypeScript)
-- Tailwind CSS
-- Node.js Route Handlers
-- Groq SDK (`groq-sdk`)
-- Zod
-- `pdf-parse` (PDF parsing)
-- `mammoth` (DOCX parsing)
+## 🔄 Navigation Flow
 
-## API Endpoints
+`Input Page → Skill Match → Assessment Chat → Results Dashboard`
 
-- `POST /api/parse`
-- `POST /api/analyze-skills`
-- `POST /api/generate-questions`
-- `POST /api/evaluate`
-- `POST /api/generate-learning-plan`
+---
 
-Every endpoint returns structured JSON:
+## 🛠 Tech Stack
+
+* Next.js (App Router, TypeScript)
+* Tailwind CSS
+* Node.js Route Handlers
+* Groq SDK (`groq-sdk`)
+* Zod
+* pdf-parse (PDF parsing)
+* mammoth (DOCX parsing)
+
+---
+
+## 🔌 API Endpoints
+
+* `POST /api/parse`
+* `POST /api/analyze-skills`
+* `POST /api/generate-questions`
+* `POST /api/evaluate`
+* `POST /api/generate-learning-plan`
+
+### Response Format
 
 ```json
 { "success": true, "data": {} }
@@ -51,7 +60,9 @@ or
 { "success": false, "error": "message", "details": "optional" }
 ```
 
-## Local Setup
+---
+
+## ⚙️ Local Setup
 
 1. Install dependencies:
 
@@ -66,19 +77,44 @@ GROQ_API_KEY=your_groq_api_key_here
 GROQ_MODEL=llama-3.3-70b-versatile
 ```
 
-3. Start dev server:
+3. Start development server:
 
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000)
+4. Open:
 
-## Deployment
+```
+http://localhost:3000
+```
 
-Ready for Vercel deployment:
+---
 
-1. Push repository to GitHub
-2. Import project into Vercel
-3. Add env vars (`GROQ_API_KEY`, optional `GROQ_MODEL`)
-4. Deploy
+## 🌐 Live Demo
+
+👉 https://talentbridge-ai-2026-bo7z9c4p5-shravyas-projects-2786a280.vercel.app/
+
+---
+
+## 🧠 What Makes It Smart
+
+* Goes beyond resume keywords
+* Evaluates **actual understanding via questions**
+* Identifies **real skill gaps**
+* Suggests **adjacent, realistic learning paths**
+
+---
+
+## 👩‍💻 Author
+
+**Shravya Palegarthuli**
+
+---
+
+## 📌 Note
+
+* Image parsing is currently preview-only (no OCR)
+* Designed as a hackathon-ready prototype with real-world extensibility
+
+---
